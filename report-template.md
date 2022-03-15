@@ -3,14 +3,14 @@
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: I was unable to submit the prediction with the negative values. After I replaced all the negative values with 0, I was able to submit.
+I was unable to submit the prediction with the negative values. After I replaced all the negative values with 0, I was able to submit.
 
 ### What was the top ranked model that performed?
-TODO: It was the WeightedEnsemble model that performed the best.
+It was the WeightedEnsemble model that performed the best.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-TODO: I performed the following activities in this regard
+I performed the following activities in this regard
 - Plotted the histograms for all the numerical columns to understand the data distribution.
 - Changed the type of datetime column from object to the datetime64 type.
 - I created 3 new columns (month, day and hour) from the datetime column
@@ -18,14 +18,14 @@ TODO: I performed the following activities in this regard
 - Changed the type of columns (season and weather) in both train and test datasets to the category type to assist Autogluon to be able to infer type correctly.
 
 ### How much better did your model perform after adding additional features and why do you think that is?
-TODO: The model showed nearly 68% of improvement on the test data after introducing additional features. The additional features like day, month and hour are very informative facts towards predicting the demand. 
+The top ranked model showed nearly 68% of improvement on the test data after introducing additional features. The additional features like day, month and hour are very informative facts towards predicting the demand. 
 
 ## Hyper parameter tuning
 ### How much better did your model perform after trying different hyper parameters?
-TODO: It didn't perform very well, in fact there was performance degradation of nearly 6% on the test dataset. It occured to me that the default set of hyperparameters are already good enough for many use cases such as establishing the baseline mode. 
+It didn't perform very well, in fact there was performance degradation of nearly 6% on the test dataset. It occured to me that the default set of hyperparameters are already good enough for many use cases such as establishing the baseline mode. 
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-TODO: I would use the Autogluon to train several models with its default hyperparameters as they are already good enough. Then, select the three best performed models, use their current scores as the baseline. And then, try to improve over the baseline score by manually tuning the hyper params and with the multiple training runs.    
+I would use the Autogluon to train several models with its default hyperparameters as they are already good enough. Then, select the three best performed models, use their current scores as the baseline. And then, try to improve over the baseline score by manually tuning the hyper params and with the multiple training runs.    
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model|num_epochs|time_limit(min)|num_trails|score|
@@ -37,18 +37,13 @@ TODO: I would use the Autogluon to train several models with its default hyperpa
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-TODO: Replace the image below with your own.
-
 ![model_train_score.png](img/model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-TODO: Replace the image below with your own.
-
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-TODO: Add your explanation
 
 Loaded the training dataset into panda dataframe. Observed the general statistical properties of the training dataset such as count, mean, max and so on using the `pd.describe` method. Then loaded and analyzed the test dataset into panda dataframe and found that two columns ( `casual` and `registered`) were not present, so removed those columns from the training dataset too, also because they are not predictive features.
 
